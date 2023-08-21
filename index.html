@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Age calculator app</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+                <div class="input-container">
+                    <div class="year">
+                        <label for="year">year</label>
+                        <input type="text" name="year" class="year input-year" placeholder="yyyy">
+                    </div>
+                    <div class="month">
+                        <label for="month">month</label>
+                        <input type="text" name="month" class="month input-month" placeholder="mm">
+                    </div>
+                    <div class="day">
+                        <label for="day">day</label>
+                        <input type="text" name="day" class="day input-day" placeholder="dd">
+                    </div>
+                    <img src="img/icon-arrow.svg" alt="icon-arrow" class="btn">
+                </div>
+                <div class="result-container">
+                    <h1><span class="result-year">--</span> years</h1>
+                    <h1><span class="result-month">--</span> months</h1>
+                    <h1><span class="result-day">--</span> days</h1>
+                </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    const inputYear = document.querySelector('.input-year').value;
+    const inputMonth = document.querySelector('.input-month').value;
+    const inputDay = document.querySelector('.input-day').value;
+    const resultYear = document.querySelector('.result-year');
+    const resultMonth = document.querySelector('.result-month');
+    const resultDay = document.querySelector('.result-day');
+    const btn = document.querySelector('.btn');
+
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    const day = date.getDay();
+    btn.addEventListener('click', ()=>{
+            const currentYear = (year-inputYear);
+            resultYear.innerText = currentYear;
+            const currentMonth = (month-inputMonth);
+            resultMonth.innerText = currentMonth;
+            const currentDay = (day-inputDay);
+            resultDay.innerText = currentDay;
+        
+    })
+
+
+
+
+
+
+
+</script>
+</html>

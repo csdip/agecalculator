@@ -1,0 +1,123 @@
+:root{
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-container{
+    position: relative;
+    display: flex;
+    padding: 40px 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--Light-grey);
+}
+
+
+.input-container label{
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color:var(--Smokey-grey);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.input-container input{
+    width: 160px;
+    height: 70px;
+    line-height: 70px;
+    border: 1px solid var(--Light-grey);
+    border-radius: 4px;
+    background: var(--White);
+    outline: none;
+    padding: 0 20px;
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--Off-black);
+}
+
+.year, .month{
+    margin-right: 20px;
+}
+
+.input-container input::placeholder{
+    color: var(--Smokey-grey);
+}
+
+.input-container input:focus{
+    border-color: var(--Off-black);
+}
+
+.result-container h1{
+    font-size: 120px;
+    font-weight: 800;
+    line-height: 1;
+    font-style: italic;
+    color: var(--Off-black);
+    margin-bottom: 20px;
+}
+
+.result-container h1 span{
+    color: var(--Purple);
+    font-weight: 800;
+}
+
+.btn {
+	position: absolute;
+	bottom: -50px;
+	right: -38px;
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+}
+
+
+@media (max-width:768px){
+    body {
+        align-items: start;
+    }
+    .container{
+        padding-top: 100px;
+    }
+    .input-container input {
+        width: 80px;
+        height: 40px;
+        line-height: 70px;
+        border: 1px solid var(--Light-grey);
+        border-radius: 4px;
+        background: var(--White);
+        outline: none;
+        padding: 0 20px;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--Off-black);
+    }
+    .result-container h1 {
+        font-size: 60px;
+    }
+    .btn {
+        bottom: -30px;
+        right: -10px;
+        width: 60px;
+        height: 60px;
+    }
+}
