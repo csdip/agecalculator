@@ -48,8 +48,8 @@
     const month = date.getMonth();
     const day = date.getDay();
     btn.addEventListener('click', ()=>{
-            const currentYear = (year - inputYear);
-            resultYear.innerText = currentYear;
+            const currentYear = (year.value - inputYear.value);
+            resultYear.innerText = currentYear.value;
             const currentMonth = (month - inputMonth);
             resultMonth.innerText = currentMonth;
             const currentDay = (day-inputDay);
